@@ -1,0 +1,46 @@
+.page {
+  padding: 40px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+header .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions .action-btn {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.actions .action-btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.12);
+}
+
+.actions .action-btn .action-btn-icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+}
+
+.actions .action-btn.remove-action {
+  color: #D72525;
+}
+
+/* Music list */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
