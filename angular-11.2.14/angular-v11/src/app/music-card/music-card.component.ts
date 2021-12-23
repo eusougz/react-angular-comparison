@@ -5,16 +5,9 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './music-card.component.html',
   styleUrls: ['./music-card.component.css']
 })
-export class MusicCardComponent implements OnInit {
+export class MusicCardComponent {
   @Input() name: string = '';
   @Input() favorite = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  toggleFavorite(): void {
-    this.favorite = !this.favorite;
-  }
 }

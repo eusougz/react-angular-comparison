@@ -2,19 +2,5 @@
   <p class="name">
     {{ name }}
   </p>
-
-  <img
-    *ngIf="!favorite"
-    src="assets/icons/favorite.svg"
-    alt="Not favorite"
-    class="fav-icon"
-    (click)="toggleFavorite()"
-  />
-  <img
-    *ngIf="favorite"
-    src="assets/icons/favorite-filled.svg"
-    alt="Not favorite"
-    class="fav-icon"
-    (click)="toggleFavorite()"
-  />
+  <span *ngIf="favorite" className="fav-icon">❤️</span>
 </div>
