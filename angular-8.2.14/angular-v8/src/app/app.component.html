@@ -1,0 +1,51 @@
+<main class="page">
+  <header>
+    <h1>Músicas escutadas 🎵</h1>
+    <section class="actions">
+      <div class="action-btn" (click)="operation('import1000Musics')">
+        Importar últimas 1.000 músicas escutadas
+        <img
+          src="assets/icons/import.svg"
+          alt="Import icon"
+          class="action-btn-icon"
+        />
+      </div>
+      <div class="action-btn" (click)="operation('import5000Musics')">
+        Importar últimas 5.000 músicas escutadas
+        <img
+          src="assets/icons/import.svg"
+          alt="Import icon"
+          class="action-btn-icon"
+        />
+      </div>
+      <div class="action-btn" (click)="operation('import10000Musics')">
+        Importar últimas 10.000 músicas escutadas
+        <img
+          src="assets/icons/import.svg"
+          alt="Import icon"
+          class="action-btn-icon"
+        />
+      </div>
+      <div class="action-btn" (click)="operation('favoriteAllMusics')">
+        Favoritar todas as músicas
+        <img
+          src="assets/icons/favorite-black.svg"
+          alt="Favorite icon"
+          class="action-btn-icon"
+        />
+      </div>
+      <div class="action-btn remove-action" (click)="operation('removeAllMusics')">
+        Remover todas músicas
+        <img
+          src="assets/icons/trash.svg"
+          alt="Trash icon"
+          class="action-btn-icon"
+        />
+      </div>
+    </section>
+  </header>
+
+  <section class="grid">
+    <app-music-card *ngFor="let music of musics; trackBy: trackByFn" [name]="music.name" [favorite]="music.favorite"></app-music-card>
+  </section>
+</main>
